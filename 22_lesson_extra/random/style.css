@@ -1,0 +1,110 @@
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container {
+  height: 200px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.flag1 {
+  background-color: white;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.flag2 {
+  background-color: firebrick;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  transition: all 2s;
+}
+
+.container:hover .flag2 {
+  width: 40%;
+  border-radius: 50%;
+  transform: translateY(-50%) translateX(75%);
+}
+
+
+/* ----------------------------- */
+.container2 {
+  background-color: gray;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  border: 1px solid black;
+  position: relative;
+}
+
+.flag3,
+.flag3::after {
+  background-color: white;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  transition: all 2s;
+  top: 0;
+}
+.flag3::after {
+  content: '';
+  background-color: transparent;
+  transform: translate(-51.5%, 50%) scaleY(2);
+}
+
+.container2:hover .flag3::after {
+  background-color: white;
+  height: 140%;
+  width: 15%;
+  transform: translate(-60%, 20%);
+  z-index: 1;
+}
+.container2:hover .flag3 {
+  background-color: red;
+}
+
+.flag4,
+.flag4::after {
+  background-color: red;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  transition: all 2s;
+  bottom: 0;
+}
+.flag4::after {
+  content: '';
+  background-color: transparent;
+  transform: translate(-51.5%, -50%) scaleY(2);
+}
+
+.container2:hover .flag4::after {
+  background-color: white;
+  height: 140%;
+  width: 15%;
+  transform: translate(-60%, -20%) rotate(90deg);
+  z-index: 1;
+}
+.container2:hover .flag4 {
+  background-color: red;
+}
