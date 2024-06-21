@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .container {
@@ -107,4 +107,53 @@ body {
 }
 .container2:hover .flag4 {
   background-color: red;
+}
+
+/* ----------------------------- */
+.box {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 400px;
+  width: 400px;
+  outline: 1px solid black;
+  position: relative;
+}
+
+.box::after {
+  content: '';
+  height: 2px;
+  width: 500px;
+  background-color: red;
+  position: absolute;
+  transform: translate(-50px, 199px);
+}
+
+.box::before {
+  content: '';
+  height: 500px;
+  width: 2px;
+  background-color: blue;
+  position: absolute;
+  transform: translate(199px, -50px);
+}
+
+.item1 {
+  height: 200px;
+  width: 200px;
+  background-color: papayawhip;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transition: all 2s;
+}
+.box:hover .item1 {
+  transform-origin: 100% -100%;
+  transform: scale(2);
+}
+
+.item2 {
+  height: 200px;
+  width: 200px;
+  background-color: whitesmoke;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
 }
