@@ -1,0 +1,96 @@
+
+/* https://css-tricks.com/almanac/properties/a/animation/ */
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* EXERCISE 1 ---------------------------------*/
+.element {
+  height: 100%;
+  width: 100%;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rebeccapurple;
+  }
+  100% {
+    background-color: brown;
+  }
+}
+
+/* EXERCISE 2 ---------------------------------*/
+.element2 {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  background-color: red;
+  animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+  }
+}
+
+
+/* EXERCISE 3 --------------------------------- */
+.element3 {
+  height: 400px;
+  width: 400px;
+  background-color: red;
+  animation: pulse 3s ease infinite alternate,
+     nudge 3s linear infinite alternate;
+  border-radius: 50%;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: red;
+    opacity: .3;
+  }
+  50% {
+    background-color: orange;
+    opacity: 1;
+  }
+}
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(150px, 0);
+  }
+  100% {
+    transform: translate(-150px, 0);
+  }
+}
+
