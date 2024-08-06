@@ -18,14 +18,19 @@
   </div>
   <script>
     function classChange() {
-      console.log('wow')
       let element = document.getElementsByClassName('menu-icon')
-      console.log('here:', element[0])
       element[0].classList.toggle('active')
+
       let noAnimElements = document.getElementsByClassName('no-animation')
-      console.log(noAnimElements)
-      for(let element in noAnimElements) {
-        
+
+      let one = noAnimElements[0]
+      let two = noAnimElements[1]
+      let three = noAnimElements[2]
+      
+      if(noAnimElements.length !== 0) {
+        one.classList.remove('no-animation')
+        two.classList.remove('no-animation')
+        three.classList.remove('no-animation')
       }
     }
   </script>
