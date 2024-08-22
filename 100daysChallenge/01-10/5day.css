@@ -230,3 +230,17 @@
   left: 249px;
   top: 61px;
 }
+.card .days {
+  width: 280px;
+  margin: 0 auto;
+}
+.card .days .day {
+  display: block;
+  float: left;
+  width: 14.2857142857%;
+  font-size: 9px;
+  color: #949494;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
