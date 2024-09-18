@@ -379,3 +379,65 @@
           animation: rotate 5.1s ease-in-out 1.6s infinite;
   filter: blur(3px);
 }
+
+.sparkle-9 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 16px;
+  height: 16px;
+  transform: rotate(215deg);
+}
+.sparkle-9:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  transform-origin: 42px 42px;
+  -webkit-animation: rotate 5.3s ease-in-out 1.8s infinite;
+          animation: rotate 5.3s ease-in-out 1.8s infinite;
+  filter: blur(3px);
+}
+
+.sparkle-10 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 17px;
+  height: 17px;
+  transform: rotate(217deg);
+}
+.sparkle-10:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  border-radius: 50%;
+  transform-origin: 40px 40px;
+  -webkit-animation: rotate 5.5s ease-in-out 2s infinite;
+          animation: rotate 5.5s ease-in-out 2s infinite;
+  filter: blur(3px);
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  to {
+    transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  to {
+    transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}
