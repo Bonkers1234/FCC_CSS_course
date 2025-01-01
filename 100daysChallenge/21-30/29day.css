@@ -130,3 +130,8 @@
   /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
   color: #A4B9CE;
 }
+
+.position {
+  margin-top: 6px;
+  transform: scale(1.2)
+}

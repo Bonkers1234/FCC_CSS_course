@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
   <link rel="stylesheet" href="29day.css">
   <title>Document</title>
 </head>
@@ -10,9 +11,32 @@
   <div class="frame">
     <div class="search">
       <input type="text" class="searchfield" placeholder="Start typing ..." value="" />
-      <button type="button" class="button"><span class="fa fa-search"></span></button>
+      <button type="button" class="button">
+        <span class="material-symbols-outlined position">
+        search
+        </span>
+      </button>
       <ul class="suggestions clearfix"></ul>
     </div>
   </div>
+  <script>
+    let searchField = document.getElementsByClassName('searchfield')[0]
+    
+    searchField.addEventListener('keyup', (e) => {
+      let suggestions = document.getElementsByClassName('suggestions')[0]
+      if(searchField.value.length) {
+        suggestions.classList.toggle('active')
+        suggestions.innerHTML = 
+        `
+          <li><b>${searchField.value}</b></li>
+          <li>Veritatis et <b>${searchField.value}</b></li>
+          <li>ut aliquid ex <b>${searchField.value}</b> vero eos</li>
+        `
+      } else {
+        suggestions.classList.toggle('active')
+        suggestions.innerHTML = ''
+      }
+    })
+  </script>
 </body>
 </html>
