@@ -13,7 +13,8 @@
         <div class="line"></div>
       </div>
       <div class="number">
-        <span class="fadeIn">0</span>
+        <span class="old">0</span>
+        <span class="new">0</span>
       </div>
       <div class="plus">
         <div class="line-h"></div>
@@ -21,5 +22,43 @@
       </div>
     </div>
   </div>
+  <script>
+    let counter = 0
+    let numberOld = document.getElementsByClassName('old')[0]
+    let numberNew = document.getElementsByClassName('new')[0]
+    let number = document.getElementsByClassName('number')[0]
+
+    let minus = document.getElementsByClassName('minus')[0]
+    minus.addEventListener('click', () => {
+      updateNumber(-1)
+    })
+    let plus = document.getElementsByClassName('plus')[0]
+    plus.addEventListener('click', () => {
+      updateNumber(1)
+    })
+
+    function updateNumber(value) {
+      counter += value
+      numberOld.innerHTML = counter
+      numberNew.classList.remove('fadeOutDown', 'fadeOutUp', 'fadeInDown', 'fadeInUp')
+      numberOld.classList.remove('fadeOutDown', 'fadeOutUp', 'fadeInDown', 'fadeInUp')
+      console.log(numberOld) //STAYS IN THE MEMORY but not in dom
+
+      // let temp = document.createElement('span')
+      let temp = numberOld.innerHTML = ''
+            
+
+
+      if(value > 0) {
+        numberOld.classList.add('fadeOutUp')
+        numberNew.classList.add('fadeInUp')
+        numberNew.innerHTML = counter
+      } else {
+        numberOld.classList.add('fadeOutDown')
+        numberNew.classList.add('fadeInDown')
+        numberNew.innerHTML = counter
+      }
+    }
+  </script>
 </body>
 </html>
