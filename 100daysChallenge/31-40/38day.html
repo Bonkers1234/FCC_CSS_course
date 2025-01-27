@@ -19,5 +19,17 @@
       </svg>
     </div>
   </div>
+  <script>
+    let frame = document.getElementsByClassName('frame')[0]
+
+    frame.addEventListener('click', () => {
+      let white = document.getElementsByClassName('white')[0]
+      let purple = document.getElementsByClassName('purple')[0]
+      white.classList.toggle('normal')
+      white.classList.toggle('big')
+      purple.classList.toggle('small')
+      purple.classList.toggle('normal')
+    })
+  </script>
 </body>
 </html>
